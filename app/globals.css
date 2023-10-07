@@ -2,26 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.header {
+  @apply container px-4 mx-auto py-4 flex justify-between items-center
+}
+.header__links {
+  @apply flex items-center gap-4 uppercase text-base font-normal text-dark tracking-[.005em]
+}
+.header__links__link{
+  @apply duration-300 cursor-pointer hover:text-primary hover:font-semibold
+}
+.header__account { 
+  @apply flex items-center gap-4 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+.footer {
+  @apply bg-dark py-12 px-[5rem] flex justify-between items-center text-white
+}
+.footer__text{
+
+}
+.footer__social{
+  @apply flex gap-4 invert
+}
+.footer__links{
+  @apply flex
+}
+.footer__links__link{
+  @apply py-3 px-2 flex items-center text-white cursor-pointer hover:text-primary duration-300
 }
