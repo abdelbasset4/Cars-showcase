@@ -5,6 +5,7 @@ import { Anybody } from 'next/font/google'
 
 const anybody = Anybody({ subsets: ['latin'] })
 
+
 export const metadata: Metadata = {
   title: 'Cars ShowCase',
   description: 'Cars Show Case',

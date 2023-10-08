@@ -10,6 +10,7 @@ const CustomButton = ({
   title,
   rightIcon,
   handleClick,
+  iconStyle
 }: CustomButtonProps) => {
   return (
     <button
@@ -24,7 +25,7 @@ const CustomButton = ({
             src={rightIcon}
             alt="arrow_left"
             fill
-            className="object-contain"
+            className={`object-contain ${iconStyle}`} 
           />
         </div>
       )}

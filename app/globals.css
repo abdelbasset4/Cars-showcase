@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,7 +23,7 @@
   @apply bg-dark py-12 px-[5rem] flex justify-between items-center text-white
 }
 .footer__text{
-
+  font-family: var(--font-genos);
 }
 .footer__social{
   @apply flex gap-4 invert
@@ -32,4 +33,32 @@
 }
 .footer__links__link{
   @apply py-3 px-2 flex items-center text-white cursor-pointer hover:text-primary duration-300
+}
+
+.hero{
+  @apply bg-dark flex justify-center items-center ps-2
+}
+
+.hero__image-container {
+  @apply relative xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
+}
+
+.hero__image {
+  @apply relative xl:w-full w-[76.25rem] xl:h-full h-[36rem] z-20;
+}
+
+.hero__image-overlay {
+  @apply absolute top-10 right-[150px] bg-hero-bg bg-repeat-round w-[35.1195rem] h-[35.1195rem] rotate-[23.186deg] mix-blend-hard-light  z-10 overflow-hidden;
+}
+
+.hero__text{
+  @apply ms-[180px]
+}
+.hero__title{
+  font-family: 'Genos', sans-serif;
+  @apply text-white text-[140px] font-bold uppercase leading-[100%] tracking-[-0.3125rem]
+}
+.hero__desc{
+  @apply text-white py-[2.54rem] text-[1.375rem] not-italic font-normal leading-[3rem] tracking-[0.00688rem] uppercase;
+
 }
