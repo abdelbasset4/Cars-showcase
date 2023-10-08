@@ -12,7 +12,10 @@ const config: Config = {
       colors:{
       "primary":"#00A8A8",
       "dark": "#161E21"
-     }
+     },
+     backgroundImage: {
+      'hero-bg': "url('/stars.png')"
+    }
     },
   },
   plugins: [],
