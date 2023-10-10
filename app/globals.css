@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Genos:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300;400;500;600;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+  font-family: 'Anybody', sans-serif;
+}
 .header {
   @apply container px-4 mx-auto py-4 flex justify-between items-center
 }
@@ -18,7 +22,42 @@
 }
 
 
+.search-manifactuer{
+  @apply flex-1 max-sm:w-full flex justify-start items-center;
+}
 
+.search-manufacturer__input {
+  @apply w-full h-[48px] pl-12 p-4 rounded-full max-sm:rounded-full bg-slate-100 outline-none cursor-pointer text-sm;
+}
+
+.search-manufacturer__option {
+  @apply cursor-default select-none py-2 pl-10 pr-4;
+}
+
+.home__car-container {
+  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 py-14;
+}
+.home__error-container {
+  @apply mt-16 flex justify-center items-center flex-col gap-2;
+}
+
+.car-card{
+  @apply flex flex-col w-full rounded-2xl bg-gray-200 text-dark p-6 hover:bg-dark hover:text-gray-300 duration-300 justify-center items-start cursor-pointer
+}
+.car-card__title{
+  font-family: 'Genos', sans-serif;
+  @apply text-4xl font-semibold capitalize mb-2 
+}
+.car-card__price{
+  @apply text-4xl font-semibold relative flex text-primary mb-4
+}
+
+.car-card__image-container{
+  @apply relative w-full h-40 my-3 object-contain
+}
+.car-card__btn-container {
+  @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
+}
 .footer {
   @apply bg-dark py-12 px-[5rem] flex justify-between items-center text-white
 }

@@ -1,9 +1,6 @@
 import { Footer, Navbar } from '@/Components'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Anybody } from 'next/font/google'
-
-const anybody = Anybody({ subsets: ['latin'] })
 
 
 export const metadata: Metadata = {
@@ -18,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={anybody.className}>
+      <body >
         <Navbar/>
         {children}
         <Footer/>
