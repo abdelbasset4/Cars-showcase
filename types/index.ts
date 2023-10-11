@@ -30,3 +30,30 @@ export interface CarsProps {
   transmission:string ;
   year: number;
 }
+
+export interface carDetailsProps {
+  isOpen: boolean;
+  closeModal : ()=>void;
+  car:CarsProps
+}
+
+export interface FilterProps {
+  manufacturer?: string;
+  model?: string;
+  year?: number;
+  limit?: number;
+  fuel?: string;
+}
+export interface HomeProps {
+  searchParams:FilterProps;
+}
+
+export interface OptionProps {
+  title:string;
+  value:string;
+}
+
+export interface CustomFilterProps {
+  title:string;
+  options:OptionProps[];
+}

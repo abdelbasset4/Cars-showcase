@@ -6,7 +6,7 @@ import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { manufacturers } from "@/constants";
 import { SearchManuFacturerProps } from "@/types";
 import Image from "next/image";
-const SearchManifacteurs = ({ manufacturerSelected, setManufacturerSelected }: SearchManuFacturerProps) => {
+const SearchManufacturer = ({ manufacturerSelected, setManufacturerSelected }: SearchManuFacturerProps) => {
   const [query, setQuery] = useState("");
 
   const filteredmanufacturers=
@@ -22,7 +22,7 @@ const SearchManifacteurs = ({ manufacturerSelected, setManufacturerSelected }: S
   return (
     <div className="search-manifactuer">
       <Combobox value={manufacturerSelected} onChange={setManufacturerSelected}>
-        <div className="relative w-full mt-1">
+        <div className="relative w-full">
           
             <Combobox.Button className="absolute top-3 left-3">
               <Image
@@ -39,12 +39,7 @@ const SearchManifacteurs = ({ manufacturerSelected, setManufacturerSelected }: S
               displayValue={(manufacturers:string) => manufacturers}
               onChange={(e) => setQuery(e.target.value)}
             />
-            <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
-              <ChevronUpDownIcon
-                className="h-5 w-5 text-gray-400"
-                aria-hidden="true"
-              />
-            </Combobox.Button>
+           
           
           <Transition
             as={Fragment}
@@ -52,7 +47,7 @@ const SearchManifacteurs = ({ manufacturerSelected, setManufacturerSelected }: S
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}>
-            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Combobox.Options className="absolute mt-1 z-10 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {filteredmanufacturers.length === 0 && query !== "" ? (
                 <div className='search-manufacturer__option'>
                   Nothing found.
@@ -96,4 +91,4 @@ const SearchManifacteurs = ({ manufacturerSelected, setManufacturerSelected }: S
   );
 };
 
-export default SearchManifacteurs;
+export default SearchManufacturer;

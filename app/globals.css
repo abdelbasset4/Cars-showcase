@@ -27,7 +27,7 @@ body{
 }
 
 .search-manufacturer__input {
-  @apply w-full h-[48px] pl-12 p-4 rounded-full max-sm:rounded-full bg-slate-100 outline-none cursor-pointer text-sm;
+  @apply w-full h-[48px] pl-12 p-4 rounded-s-full max-sm:rounded-full bg-slate-100 outline-none cursor-pointer text-sm;
 }
 
 .search-manufacturer__option {
@@ -100,4 +100,15 @@ body{
 .hero__desc{
   @apply text-white py-[2.54rem] text-[1.375rem] not-italic font-normal leading-[3rem] tracking-[0.00688rem] uppercase;
 
+}
+
+
+.searchbar {
+  @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 mt-2;
+}
+.searchbar__item {
+  @apply flex-1 max-sm:w-full flex justify-start items-center relative;
+}
+.searchbar__input {
+  @apply w-full h-[48px] pl-12 p-4 rounded-e-full max-sm:rounded-full bg-slate-100 outline-none cursor-pointer text-sm;
 }

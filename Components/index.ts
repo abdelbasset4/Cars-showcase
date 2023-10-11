@@ -3,8 +3,10 @@ import Button from './CustomButton';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import SearchBar from './SearchBar';
-import SearchManifacteurs from './SearchManifacteurs';
+import SearchManufacturer from './SearchManufacturer';
 import CarCard from './CarCard';
+import CarDetails from './CarDetails';
+import CustomFilter from './CustomFilter';
 
 export {
     Hero,
@@ -12,6 +14,8 @@ export {
     Navbar,
     Footer,
     SearchBar,
-    SearchManifacteurs,
-    CarCard
+    SearchManufacturer,
+    CarCard,
+    CarDetails,
+    CustomFilter
 }
