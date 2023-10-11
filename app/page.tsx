@@ -1,10 +1,18 @@
-import { CarCard, Hero, SearchBar } from "@/Components";
-
+import { CarCard, CustomFilter, Hero, SearchBar } from "@/Components";
+import { fuels, yearsOfProduction } from "@/constants";
+import { HomeProps } from "@/types";
 import { getCars } from "@/utils";
-export default async function Home() {
-  const allCars = await getCars();
-  const isEmptyCars = !allCars || allCars.length < 1;
 
+export default async function Home({searchParams}:HomeProps) {
+  const allCars = await getCars({
+    manufacturer: searchParams.manufacturer || "",
+    year: searchParams.year || 2022,
+    fuel: searchParams.fuel || "",
+    limit: searchParams.limit || 10,
+    model: searchParams.model || "",
+  });
+  const isEmptyCars = !allCars || allCars.length < 1;
+  
   return (
     <main>
       <Hero />
@@ -13,8 +21,12 @@ export default async function Home() {
           <h1 className="font-extrabold text-4xl mb-2">Cars Catelogue</h1>
           <p>show awesome cars in our website:</p>
         </div>
-        <div>
+        <div className="flex justify-between items-center flex-wrap gap-5">
           <SearchBar />
+          <div className="flex justify-start flex-wrap items-center gap-2">
+            <CustomFilter title="feul" options={fuels}/>
+            <CustomFilter title="year" options={yearsOfProduction}/>
+          </div>
         </div>
 
         {!isEmptyCars ? (
