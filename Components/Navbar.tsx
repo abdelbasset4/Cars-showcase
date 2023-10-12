@@ -21,11 +21,11 @@ const Navbar = () => {
             <CustomButton
                 title="My Cart"
                 rightIcon="/shopping-cart.svg"
-                containerStyles="flex items-center h-12 gap-2 px-4 py-4 uppercase  text-[1rem] font-normal leading-[100%] tracking-[0.03125rem] relative after:content-['2'] after:absolute after:bg-primary after:top-0 after:right-0 after:rounded-full after:w-5 after:h-5 after:text-white after:text-[12px] after:leading-[20px]"
+                containerStyles="btn__shopping-cart"
             />
             <CustomButton
                 title="Login"
-                containerStyles="flex items-center h-12 bg-primary uppercase text-white px-7 py-4 rounded-[0.625rem] border-solid  text-[1.125rem] font-normal leading-[100%] tracking-[0.03125rem]"
+                containerStyles="btn__login"
             />
 
         </div>

@@ -16,8 +16,8 @@ const Hero = () => {
           <CustomButton
                 title="Vehicles"
                 rightIcon="/arrow-right.svg"
-                iconStyle="invert ms-2"
-                containerStyles="custom-container-btn"
+                iconStyle="btn__icon-card-car"
+                containerStyles="btn__hero-container"
             />
         </div>
         <div className="hero__image-container">
