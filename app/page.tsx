@@ -17,11 +17,11 @@ export default async function Home({searchParams}:HomeProps) {
     <main>
       <Hero />
       <div className="mt-10 container mx-auto">
-        <div className="">
+        <div className=" px-3">
           <h1 className="font-extrabold text-4xl mb-2">Cars Catelogue</h1>
           <p>show awesome cars in our website:</p>
         </div>
-        <div className="flex justify-between items-center flex-wrap gap-5">
+        <div className="flex justify-between items-center flex-wrap gap-5 px-3">
           <SearchBar />
           <div className="flex justify-start flex-wrap items-center gap-2">
             <CustomFilter title="feul" options={fuels}/>
