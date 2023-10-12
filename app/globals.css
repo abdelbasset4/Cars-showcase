@@ -110,3 +110,8 @@ body{
 .searchbar__input {
   @apply w-full h-[48px] pl-12 p-4 rounded-e-full max-sm:rounded-full bg-slate-100 outline-none cursor-pointer text-sm;
 }
+
+
+.custom-container-btn{
+  @apply flex items-center h-12 bg-primary uppercase text-white p-7  rounded-[0.625rem] border-solid  text-[1.125rem] font-normal leading-[100%] tracking-[0.03125rem]
+}

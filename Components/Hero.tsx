@@ -17,7 +17,7 @@ const Hero = () => {
                 title="Vehicles"
                 rightIcon="/arrow-right.svg"
                 iconStyle="invert ms-2"
-                containerStyles="flex items-center h-12 bg-primary uppercase text-white p-7  rounded-[0.625rem] border-solid  text-[1.125rem] font-normal leading-[100%] tracking-[0.03125rem]"
+                containerStyles="custom-container-btn"
             />
         </div>
         <div className="hero__image-container">
