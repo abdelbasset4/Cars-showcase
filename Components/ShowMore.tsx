@@ -12,7 +12,7 @@ const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
     router.push(newPathname);
   };
   return (
-    <div className="w-full flex justify-center items-start my-10">
+    <div className="w-full flex justify-center my-10">
       {!isNext && (
         <CustomButton
           title="Show More"

@@ -8,6 +8,11 @@
 body{
   font-family: 'Anybody', sans-serif;
 }
+
+.custom-btn {
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+} 
+
 .header {
   @apply container px-4 mx-auto py-4 flex justify-between items-center
 }
